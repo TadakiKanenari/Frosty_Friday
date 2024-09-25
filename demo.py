@@ -14,7 +14,7 @@ def get_data(option):
     if option == 'None':
         return snowpark.DataFrame()
     elif option in ['Grants']:
-        query = f"SHOW {option}"
+        query = f"SHOW {option} ON ACCOUNT"
     else:
         query = f"SHOW {option} IN ACCOUNT"
         
